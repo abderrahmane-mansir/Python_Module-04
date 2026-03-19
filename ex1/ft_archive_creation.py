@@ -17,7 +17,7 @@ def create_archive(filename: str) -> None:
 def main() -> None:
     print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===\n")
     filename = "ancient_fragment.txt"
-    vault_access(filename)
+    create_archive(filename)
 
 
 if __name__ == "__main__":
