@@ -1,6 +1,6 @@
 def vault_access(filename: str) -> None:
     try:
-        file = open(filename, "r")
+        file = open(filename)
         content = file.read()
         print("Accessing Storage Vault: ", file.name)
     except FileNotFoundError as e:

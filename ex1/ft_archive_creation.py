@@ -1,13 +1,19 @@
 def create_archive(filename: str) -> None:
     try:
-        with open(filename, "r") as file:
-            content = file.read()
-            print("Accessing Storage Vault: ", file.name)
+        print(f"Initializing new storage unit: {filename}")
+        file = open(filename, "w")
+        print("Storage unit created successfully...\n")
+        file.write("[ENTRY 001] New quantum algorithm discovered\n")
+        file.write("[ENTRY 002] Efficiency increased by 347%\n")
+        file.write("[ENTRY 003] Archived by Data Archivist trainee")
     except FileNotFoundError as e:
         print(f"Error FileNotFoundError: {e}")
+    finally:
+        file.close()
     try:
-        print("Connection established...\n")
-        print("RECOVERED DATA:")
+        file = open(filename, "r")
+        print("Inscribing preservation data...")
+        content = file.read()
         print(content)
         print("\nData recovery complete. Storage unit disconnected.")
     except Exception as e:
@@ -15,7 +21,7 @@ def create_archive(filename: str) -> None:
 
 
 def main() -> None:
-    print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===\n")
+    print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===\n")
     filename = "ancient_fragment.txt"
     create_archive(filename)
 
