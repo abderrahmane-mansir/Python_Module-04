@@ -1,10 +1,12 @@
 def vault_access(filename: str) -> None:
     try:
-        with open(filename, "r") as file:
-            content = file.read()
-            print("Accessing Storage Vault: ", file.name)
+        file = open(filename, "r")
+        content = file.read()
+        print("Accessing Storage Vault: ", file.name)
     except FileNotFoundError as e:
         print(f"Error FileNotFoundError: {e}")
+    finally:
+        file.close()
     try:
         print("Connection established...\n")
         print("RECOVERED DATA:")
