@@ -1,6 +1,6 @@
 import sys
 
-def main():
+def main() -> None:
     print("=== CYBER ARCHIVES - COMMUNICATION SYSTEM ===\n")
     
     try:
