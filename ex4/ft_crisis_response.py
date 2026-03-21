@@ -3,16 +3,15 @@ def crisis_management(filename: str) -> None:
     try:
         with open(filename) as file:
             content = file.read()
-    except FileNotFoundError:
-        print("RESPONSE: Archive not found in storage matrix")
-        print("STATUS: Crisis handled, system stable\n")
     except PermissionError:
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, system maintained\n")
+    except FileNotFoundError:
+        print("RESPONSE: Archive not found in storage matrix")
+        print("STATUS: Crisis handled, system stable\n")
     else:
         print(f"SUCCESS: Archive recovered - ``{content}''")
         print("STATUS: Normal operations resumed\n")
-    print(content + "\n")
 
 
 def main() -> None:
