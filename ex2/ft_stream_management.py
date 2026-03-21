@@ -1,14 +1,15 @@
 import sys
 
+
 def main() -> None:
     print("=== CYBER ARCHIVES - COMMUNICATION SYSTEM ===\n")
-    
+
     try:
         print("Input Stream active. ", end="")
         id = input("Enter archivist ID: ")
         print("Input Stream active. ", end="")
         status = input("Enter status report: ")
-    except KeyboardInterrupt as e:
+    except KeyboardInterrupt:
         print("\nOperation cancelled by user.")
         sys.exit(1)
     try:
@@ -25,5 +26,5 @@ def main() -> None:
 if __name__ == "__main__":
     try:
         main()
-    except BaseException as e:
+    except Exception as e:
         print(f"An unexpected error occurred: {e}")
