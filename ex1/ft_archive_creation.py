@@ -16,6 +16,7 @@ def create_archive(filename: str) -> None:
         content = file.read()
         print(content)
         print("\nData recovery complete. Storage unit disconnected.")
+        print(f"Archive '{file.name}' ready for long-term preservation.")
     except Exception as e:
         print(f"Error: {e}")
 
