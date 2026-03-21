@@ -23,7 +23,7 @@ def create_archive(filename: str) -> None:
 
 def main() -> None:
     print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===\n")
-    filename = "ancient_fragment.txt"
+    filename = "new_discovery.txt"
     create_archive(filename)
 
 
